@@ -1,0 +1,5 @@
+C:\LorrySalarySystem_dev\LorrySalarySystem_dev\obj\Release\LorrySalarySystem_dev.Login.resources
+C:\LorrySalarySystem_dev\LorrySalarySystem_dev\obj\Release\LorrySalarySystem_dev.MasterForm.resources
+C:\LorrySalarySystem_dev\LorrySalarySystem_dev\obj\Release\LorrySalarySystem_dev.Properties.Resources.resources
+C:\LorrySalarySystem_dev\LorrySalarySystem_dev\obj\Release\LorrySalarySystem_dev.Report.XtraReport1.resources
+C:\LorrySalarySystem_dev\LorrySalarySystem_dev\obj\Release\LorrySalarySystem_dev.csproj.GenerateResource.Cache

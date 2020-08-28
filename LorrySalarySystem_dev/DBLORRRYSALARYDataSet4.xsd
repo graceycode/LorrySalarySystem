@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DBLORRRYSALARYDataSet" targetNamespace="http://tempuri.org/DBLORRRYSALARYDataSet4.xsd" xmlns:mstns="http://tempuri.org/DBLORRRYSALARYDataSet4.xsd" xmlns="http://tempuri.org/DBLORRRYSALARYDataSet4.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbLorrrySalaryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbLorrrySalaryConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LorrySalarySystem_dev.Properties.Settings.GlobalReference.Default.dbLorrrySalaryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_DriverTableAdapter" GeneratorDataComponentClassName="vw_DriverTableAdapter" Name="vw_Driver" UserDataComponentName="vw_DriverTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbLorrrySalaryConnectionString (Settings)" DbObjectName="dbo.vw_Driver" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, DriverName, DriverIC, StatusName FROM dbo.vw_Driver</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="DriverName" DataSetColumn="DriverName" />
+              <Mapping SourceColumn="DriverIC" DataSetColumn="DriverIC" />
+              <Mapping SourceColumn="StatusName" DataSetColumn="StatusName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DBLORRRYSALARYDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DBLORRRYSALARYDataSet" msprop:Generator_UserDSName="DBLORRRYSALARYDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_Driver" msprop:Generator_TableClassName="vw_DriverDataTable" msprop:Generator_TableVarName="tablevw_Driver" msprop:Generator_TablePropName="vw_Driver" msprop:Generator_RowDeletingName="vw_DriverRowDeleting" msprop:Generator_RowChangingName="vw_DriverRowChanging" msprop:Generator_RowEvHandlerName="vw_DriverRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_DriverRowDeleted" msprop:Generator_UserTableName="vw_Driver" msprop:Generator_RowChangedName="vw_DriverRowChanged" msprop:Generator_RowEvArgName="vw_DriverRowChangeEvent" msprop:Generator_RowClassName="vw_DriverRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="DriverName" msprop:Generator_ColumnVarNameInTable="columnDriverName" msprop:Generator_ColumnPropNameInRow="DriverName" msprop:Generator_ColumnPropNameInTable="DriverNameColumn" msprop:Generator_UserColumnName="DriverName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DriverIC" msprop:Generator_ColumnVarNameInTable="columnDriverIC" msprop:Generator_ColumnPropNameInRow="DriverIC" msprop:Generator_ColumnPropNameInTable="DriverICColumn" msprop:Generator_UserColumnName="DriverIC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StatusName" msprop:Generator_ColumnVarNameInTable="columnStatusName" msprop:Generator_ColumnPropNameInRow="StatusName" msprop:Generator_ColumnPropNameInTable="StatusNameColumn" msprop:Generator_UserColumnName="StatusName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Driver" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

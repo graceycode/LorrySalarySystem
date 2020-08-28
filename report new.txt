@@ -1,0 +1,2 @@
+Tipper Lorry 	trip     take commision		- sum of field Amount * ttlCommisionRate
+Ready to Mix	ton	without commission	- sum of field Amount

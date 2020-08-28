@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="vwLorry" targetNamespace="http://tempuri.org/vwLorry.xsd" xmlns:mstns="http://tempuri.org/vwLorry.xsd" xmlns="http://tempuri.org/vwLorry.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbLorrrySalaryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbLorrrySalaryConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LorrySalarySystem_dev.Properties.Settings.GlobalReference.Default.dbLorrrySalaryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_LorryTableAdapter" GeneratorDataComponentClassName="vw_LorryTableAdapter" Name="vw_Lorry" UserDataComponentName="vw_LorryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbLorrrySalaryConnectionString (Settings)" DbObjectName="dbo.vw_Lorry" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT LorryID, LorryNo, CommissionRate, StatusName FROM dbo.vw_Lorry</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LorryID" DataSetColumn="LorryID" />
+              <Mapping SourceColumn="LorryNo" DataSetColumn="LorryNo" />
+              <Mapping SourceColumn="CommissionRate" DataSetColumn="CommissionRate" />
+              <Mapping SourceColumn="StatusName" DataSetColumn="StatusName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="vwLorry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="vwLorry" msprop:Generator_UserDSName="vwLorry">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_Lorry" msprop:Generator_TableClassName="vw_LorryDataTable" msprop:Generator_TableVarName="tablevw_Lorry" msprop:Generator_TablePropName="vw_Lorry" msprop:Generator_RowDeletingName="vw_LorryRowDeleting" msprop:Generator_RowChangingName="vw_LorryRowChanging" msprop:Generator_RowEvHandlerName="vw_LorryRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_LorryRowDeleted" msprop:Generator_UserTableName="vw_Lorry" msprop:Generator_RowChangedName="vw_LorryRowChanged" msprop:Generator_RowEvArgName="vw_LorryRowChangeEvent" msprop:Generator_RowClassName="vw_LorryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LorryID" msprop:Generator_ColumnVarNameInTable="columnLorryID" msprop:Generator_ColumnPropNameInRow="LorryID" msprop:Generator_ColumnPropNameInTable="LorryIDColumn" msprop:Generator_UserColumnName="LorryID" type="xs:int" />
+              <xs:element name="LorryNo" msprop:Generator_ColumnVarNameInTable="columnLorryNo" msprop:Generator_ColumnPropNameInRow="LorryNo" msprop:Generator_ColumnPropNameInTable="LorryNoColumn" msprop:Generator_UserColumnName="LorryNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommissionRate" msprop:Generator_ColumnVarNameInTable="columnCommissionRate" msprop:Generator_ColumnPropNameInRow="CommissionRate" msprop:Generator_ColumnPropNameInTable="CommissionRateColumn" msprop:Generator_UserColumnName="CommissionRate" type="xs:decimal" />
+              <xs:element name="StatusName" msprop:Generator_ColumnVarNameInTable="columnStatusName" msprop:Generator_ColumnPropNameInRow="StatusName" msprop:Generator_ColumnPropNameInTable="StatusNameColumn" msprop:Generator_UserColumnName="StatusName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Lorry" />
+      <xs:field xpath="mstns:LorryID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

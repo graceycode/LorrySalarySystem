@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsSalaryReport1" targetNamespace="http://tempuri.org/dsSalaryReport1.xsd" xmlns:mstns="http://tempuri.org/dsSalaryReport1.xsd" xmlns="http://tempuri.org/dsSalaryReport1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DBLORRRYSALARYConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DBLORRRYSALARYConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LorrySalarySystem_dev.Properties.Settings.GlobalReference.Default.DBLORRRYSALARYConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_SalaryTableAdapter" GeneratorDataComponentClassName="vw_SalaryTableAdapter" Name="vw_Salary" UserDataComponentName="vw_SalaryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DBLORRRYSALARYConnectionString1 (Settings)" DbObjectName="dbo.vw_Salary" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, Date, DriverName, LorryNo, TripTypeName, CommissionRate, DONo, DODate, [From], [To], Goods, Qty, RateID, Rate, Amount, CreatedBy, CreatedOn, LastChangeBy, LastChangeOn FROM dbo.vw_Salary</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="DriverName" DataSetColumn="DriverName" />
+              <Mapping SourceColumn="LorryNo" DataSetColumn="LorryNo" />
+              <Mapping SourceColumn="TripTypeName" DataSetColumn="TripTypeName" />
+              <Mapping SourceColumn="CommissionRate" DataSetColumn="CommissionRate" />
+              <Mapping SourceColumn="DONo" DataSetColumn="DONo" />
+              <Mapping SourceColumn="DODate" DataSetColumn="DODate" />
+              <Mapping SourceColumn="From" DataSetColumn="From" />
+              <Mapping SourceColumn="To" DataSetColumn="To" />
+              <Mapping SourceColumn="Goods" DataSetColumn="Goods" />
+              <Mapping SourceColumn="Qty" DataSetColumn="Qty" />
+              <Mapping SourceColumn="RateID" DataSetColumn="RateID" />
+              <Mapping SourceColumn="Rate" DataSetColumn="Rate" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
+              <Mapping SourceColumn="CreatedOn" DataSetColumn="CreatedOn" />
+              <Mapping SourceColumn="LastChangeBy" DataSetColumn="LastChangeBy" />
+              <Mapping SourceColumn="LastChangeOn" DataSetColumn="LastChangeOn" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblLorryTableAdapter" GeneratorDataComponentClassName="tblLorryTableAdapter" Name="tblLorry" UserDataComponentName="tblLorryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DBLORRRYSALARYConnectionString1 (Settings)" DbObjectName="dbo.tblLorry" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[tblLorry] WHERE (([LorryID] = @Original_LorryID) AND ([LorryNo] = @Original_LorryNo) AND ([CommissionRate] = @Original_CommissionRate) AND ([StatusID] = @Original_StatusID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LorryID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LorryID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LorryNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LorryNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_CommissionRate" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CommissionRate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_StatusID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StatusID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[tblLorry] ([LorryNo], [CommissionRate], [StatusID]) VALUES (@LorryNo, @CommissionRate, @StatusID);
+SELECT LorryID, LorryNo, CommissionRate, StatusID FROM tblLorry WHERE (LorryID = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LorryNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LorryNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@CommissionRate" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CommissionRate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@StatusID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StatusID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT LorryID, LorryNo, CommissionRate, StatusID FROM dbo.tblLorry</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[tblLorry] SET [LorryNo] = @LorryNo, [CommissionRate] = @CommissionRate, [StatusID] = @StatusID WHERE (([LorryID] = @Original_LorryID) AND ([LorryNo] = @Original_LorryNo) AND ([CommissionRate] = @Original_CommissionRate) AND ([StatusID] = @Original_StatusID));
+SELECT LorryID, LorryNo, CommissionRate, StatusID FROM tblLorry WHERE (LorryID = @LorryID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LorryNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LorryNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@CommissionRate" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CommissionRate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@StatusID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StatusID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LorryID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LorryID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_LorryNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LorryNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_CommissionRate" Precision="18" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="CommissionRate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_StatusID" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StatusID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="LorryID" ColumnName="LorryID" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@LorryID" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="LorryID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LorryID" DataSetColumn="LorryID" />
+              <Mapping SourceColumn="LorryNo" DataSetColumn="LorryNo" />
+              <Mapping SourceColumn="CommissionRate" DataSetColumn="CommissionRate" />
+              <Mapping SourceColumn="StatusID" DataSetColumn="StatusID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblReportHeaderTableAdapter" GeneratorDataComponentClassName="tblReportHeaderTableAdapter" Name="tblReportHeader" UserDataComponentName="tblReportHeaderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DBLORRRYSALARYConnectionString1 (Settings)" DbObjectName="dbo.tblReportHeader" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [tblReportHeader] WHERE (((@IsNull_CompanyTitle = 1 AND [CompanyTitle] IS NULL) OR ([CompanyTitle] = @Original_CompanyTitle)) AND ((@IsNull_Tel = 1 AND [Tel] IS NULL) OR ([Tel] = @Original_Tel)) AND ((@IsNull_Fax = 1 AND [Fax] IS NULL) OR ([Fax] = @Original_Fax)) AND ([Id] = @Original_Id))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CompanyTitle" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CompanyTitle" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CompanyTitle" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CompanyTitle" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Tel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Tel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Tel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fax" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fax" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Fax" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Fax" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [tblReportHeader] ([CompanyTitle], [CompanyAddress], [Tel], [Fax], [Id]) VALUES (@CompanyTitle, @CompanyAddress, @Tel, @Fax, @Id);
+SELECT CompanyTitle, CompanyAddress, Tel, Fax, Id FROM tblReportHeader WHERE (Id = @Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CompanyTitle" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CompanyTitle" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CompanyAddress" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CompanyAddress" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Tel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Tel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Fax" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Fax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CompanyTitle, CompanyAddress, Tel, Fax, Id FROM tblReportHeader</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [tblReportHeader] SET [CompanyTitle] = @CompanyTitle, [CompanyAddress] = @CompanyAddress, [Tel] = @Tel, [Fax] = @Fax, [Id] = @Id WHERE (((@IsNull_CompanyTitle = 1 AND [CompanyTitle] IS NULL) OR ([CompanyTitle] = @Original_CompanyTitle)) AND ((@IsNull_Tel = 1 AND [Tel] IS NULL) OR ([Tel] = @Original_Tel)) AND ((@IsNull_Fax = 1 AND [Fax] IS NULL) OR ([Fax] = @Original_Fax)) AND ([Id] = @Original_Id));
+SELECT CompanyTitle, CompanyAddress, Tel, Fax, Id FROM tblReportHeader WHERE (Id = @Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CompanyTitle" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CompanyTitle" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@CompanyAddress" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CompanyAddress" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Tel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Tel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Fax" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Fax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CompanyTitle" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CompanyTitle" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_CompanyTitle" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="CompanyTitle" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Tel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Tel" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Tel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Tel" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fax" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fax" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Fax" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Fax" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CompanyTitle" DataSetColumn="CompanyTitle" />
+              <Mapping SourceColumn="CompanyAddress" DataSetColumn="CompanyAddress" />
+              <Mapping SourceColumn="Tel" DataSetColumn="Tel" />
+              <Mapping SourceColumn="Fax" DataSetColumn="Fax" />
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsSalaryReport1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSalaryReport1" msprop:Generator_UserDSName="dsSalaryReport1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_Salary" msprop:Generator_TableClassName="vw_SalaryDataTable" msprop:Generator_TableVarName="tablevw_Salary" msprop:Generator_TablePropName="vw_Salary" msprop:Generator_RowDeletingName="vw_SalaryRowDeleting" msprop:Generator_RowChangingName="vw_SalaryRowChanging" msprop:Generator_RowEvHandlerName="vw_SalaryRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_SalaryRowDeleted" msprop:Generator_UserTableName="vw_Salary" msprop:Generator_RowChangedName="vw_SalaryRowChanged" msprop:Generator_RowEvArgName="vw_SalaryRowChangeEvent" msprop:Generator_RowClassName="vw_SalaryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
+              <xs:element name="DriverName" msprop:Generator_ColumnVarNameInTable="columnDriverName" msprop:Generator_ColumnPropNameInRow="DriverName" msprop:Generator_ColumnPropNameInTable="DriverNameColumn" msprop:Generator_UserColumnName="DriverName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LorryNo" msprop:Generator_ColumnVarNameInTable="columnLorryNo" msprop:Generator_ColumnPropNameInRow="LorryNo" msprop:Generator_ColumnPropNameInTable="LorryNoColumn" msprop:Generator_UserColumnName="LorryNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TripTypeName" msprop:Generator_ColumnVarNameInTable="columnTripTypeName" msprop:Generator_ColumnPropNameInRow="TripTypeName" msprop:Generator_ColumnPropNameInTable="TripTypeNameColumn" msprop:Generator_UserColumnName="TripTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommissionRate" msprop:Generator_ColumnVarNameInTable="columnCommissionRate" msprop:Generator_ColumnPropNameInRow="CommissionRate" msprop:Generator_ColumnPropNameInTable="CommissionRateColumn" msprop:Generator_UserColumnName="CommissionRate" type="xs:decimal" />
+              <xs:element name="DONo" msprop:Generator_ColumnVarNameInTable="columnDONo" msprop:Generator_ColumnPropNameInRow="DONo" msprop:Generator_ColumnPropNameInTable="DONoColumn" msprop:Generator_UserColumnName="DONo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DODate" msprop:Generator_ColumnVarNameInTable="columnDODate" msprop:Generator_ColumnPropNameInRow="DODate" msprop:Generator_ColumnPropNameInTable="DODateColumn" msprop:Generator_UserColumnName="DODate" type="xs:dateTime" />
+              <xs:element name="From" msprop:Generator_ColumnVarNameInTable="columnFrom" msprop:Generator_ColumnPropNameInRow="From" msprop:Generator_ColumnPropNameInTable="FromColumn" msprop:Generator_UserColumnName="From">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="To" msprop:Generator_ColumnVarNameInTable="columnTo" msprop:Generator_ColumnPropNameInRow="To" msprop:Generator_ColumnPropNameInTable="ToColumn" msprop:Generator_UserColumnName="To">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Goods" msprop:Generator_ColumnVarNameInTable="columnGoods" msprop:Generator_ColumnPropNameInRow="Goods" msprop:Generator_ColumnPropNameInTable="GoodsColumn" msprop:Generator_UserColumnName="Goods">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:decimal" />
+              <xs:element name="RateID" msprop:Generator_ColumnVarNameInTable="columnRateID" msprop:Generator_ColumnPropNameInRow="RateID" msprop:Generator_ColumnPropNameInTable="RateIDColumn" msprop:Generator_UserColumnName="RateID" type="xs:int" />
+              <xs:element name="Rate" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" msprop:Generator_UserColumnName="Rate" type="xs:decimal" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" />
+              <xs:element name="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" msprop:Generator_UserColumnName="CreatedBy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedOn" msprop:Generator_ColumnVarNameInTable="columnCreatedOn" msprop:Generator_ColumnPropNameInRow="CreatedOn" msprop:Generator_ColumnPropNameInTable="CreatedOnColumn" msprop:Generator_UserColumnName="CreatedOn" type="xs:dateTime" />
+              <xs:element name="LastChangeBy" msprop:Generator_ColumnVarNameInTable="columnLastChangeBy" msprop:Generator_ColumnPropNameInRow="LastChangeBy" msprop:Generator_ColumnPropNameInTable="LastChangeByColumn" msprop:Generator_UserColumnName="LastChangeBy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastChangeOn" msprop:Generator_ColumnVarNameInTable="columnLastChangeOn" msprop:Generator_ColumnPropNameInRow="LastChangeOn" msprop:Generator_ColumnPropNameInTable="LastChangeOnColumn" msprop:Generator_UserColumnName="LastChangeOn" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblLorry" msprop:Generator_TableClassName="tblLorryDataTable" msprop:Generator_TableVarName="tabletblLorry" msprop:Generator_TablePropName="tblLorry" msprop:Generator_RowDeletingName="tblLorryRowDeleting" msprop:Generator_RowChangingName="tblLorryRowChanging" msprop:Generator_RowEvHandlerName="tblLorryRowChangeEventHandler" msprop:Generator_RowDeletedName="tblLorryRowDeleted" msprop:Generator_UserTableName="tblLorry" msprop:Generator_RowChangedName="tblLorryRowChanged" msprop:Generator_RowEvArgName="tblLorryRowChangeEvent" msprop:Generator_RowClassName="tblLorryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LorryID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLorryID" msprop:Generator_ColumnPropNameInRow="LorryID" msprop:Generator_ColumnPropNameInTable="LorryIDColumn" msprop:Generator_UserColumnName="LorryID" type="xs:int" />
+              <xs:element name="LorryNo" msprop:Generator_ColumnVarNameInTable="columnLorryNo" msprop:Generator_ColumnPropNameInRow="LorryNo" msprop:Generator_ColumnPropNameInTable="LorryNoColumn" msprop:Generator_UserColumnName="LorryNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommissionRate" msprop:Generator_ColumnVarNameInTable="columnCommissionRate" msprop:Generator_ColumnPropNameInRow="CommissionRate" msprop:Generator_ColumnPropNameInTable="CommissionRateColumn" msprop:Generator_UserColumnName="CommissionRate" type="xs:decimal" />
+              <xs:element name="StatusID" msprop:Generator_ColumnVarNameInTable="columnStatusID" msprop:Generator_ColumnPropNameInRow="StatusID" msprop:Generator_ColumnPropNameInTable="StatusIDColumn" msprop:Generator_UserColumnName="StatusID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblReportHeader" msprop:Generator_TableClassName="tblReportHeaderDataTable" msprop:Generator_TableVarName="tabletblReportHeader" msprop:Generator_TablePropName="tblReportHeader" msprop:Generator_RowDeletingName="tblReportHeaderRowDeleting" msprop:Generator_RowChangingName="tblReportHeaderRowChanging" msprop:Generator_RowEvHandlerName="tblReportHeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="tblReportHeaderRowDeleted" msprop:Generator_UserTableName="tblReportHeader" msprop:Generator_RowChangedName="tblReportHeaderRowChanged" msprop:Generator_RowEvArgName="tblReportHeaderRowChangeEvent" msprop:Generator_RowClassName="tblReportHeaderRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CompanyTitle" msprop:Generator_ColumnVarNameInTable="columnCompanyTitle" msprop:Generator_ColumnPropNameInRow="CompanyTitle" msprop:Generator_ColumnPropNameInTable="CompanyTitleColumn" msprop:Generator_UserColumnName="CompanyTitle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CompanyAddress" msprop:Generator_ColumnVarNameInTable="columnCompanyAddress" msprop:Generator_ColumnPropNameInRow="CompanyAddress" msprop:Generator_ColumnPropNameInTable="CompanyAddressColumn" msprop:Generator_UserColumnName="CompanyAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tel" msprop:Generator_ColumnVarNameInTable="columnTel" msprop:Generator_ColumnPropNameInRow="Tel" msprop:Generator_ColumnPropNameInTable="TelColumn" msprop:Generator_UserColumnName="Tel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fax" msprop:Generator_ColumnVarNameInTable="columnFax" msprop:Generator_ColumnPropNameInRow="Fax" msprop:Generator_ColumnPropNameInTable="FaxColumn" msprop:Generator_UserColumnName="Fax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Salary" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="tblLorry_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblLorry" />
+      <xs:field xpath="mstns:LorryID" />
+    </xs:unique>
+    <xs:unique name="tblReportHeader_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblReportHeader" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="vw_Salary_tblLorry" msdata:parent="vw_Salary" msdata:child="tblLorry" msdata:parentkey="LorryNo" msdata:childkey="LorryNo" msprop:Generator_UserChildTable="tblLorry" msprop:Generator_ChildPropName="GettblLorryRows" msprop:Generator_UserRelationName="vw_Salary_tblLorry" msprop:Generator_ParentPropName="vw_SalaryRow" msprop:Generator_RelationVarName="relationvw_Salary_tblLorry" msprop:Generator_UserParentTable="vw_Salary" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

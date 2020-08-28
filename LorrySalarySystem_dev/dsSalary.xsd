@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsSalary" targetNamespace="http://tempuri.org/dsSalary.xsd" xmlns:mstns="http://tempuri.org/dsSalary.xsd" xmlns="http://tempuri.org/dsSalary.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DBLORRRYSALARYConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DBLORRRYSALARYConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LorrySalarySystem_dev.Properties.Settings.GlobalReference.Default.DBLORRRYSALARYConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_DriverTableAdapter" GeneratorDataComponentClassName="vw_DriverTableAdapter" Name="vw_Driver" UserDataComponentName="vw_DriverTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DBLORRRYSALARYConnectionString1 (Settings)" DbObjectName="dbo.vw_Driver" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, DriverName, DriverIC, StatusName FROM dbo.vw_Driver</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="DriverName" DataSetColumn="DriverName" />
+              <Mapping SourceColumn="DriverIC" DataSetColumn="DriverIC" />
+              <Mapping SourceColumn="StatusName" DataSetColumn="StatusName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_LorryTableAdapter" GeneratorDataComponentClassName="vw_LorryTableAdapter" Name="vw_Lorry" UserDataComponentName="vw_LorryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DBLORRRYSALARYConnectionString1 (Settings)" DbObjectName="dbo.vw_Lorry" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT LorryID, LorryNo, CommissionRate, StatusName FROM dbo.vw_Lorry</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LorryID" DataSetColumn="LorryID" />
+              <Mapping SourceColumn="LorryNo" DataSetColumn="LorryNo" />
+              <Mapping SourceColumn="CommissionRate" DataSetColumn="CommissionRate" />
+              <Mapping SourceColumn="StatusName" DataSetColumn="StatusName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_SalaryTableAdapter" GeneratorDataComponentClassName="vw_SalaryTableAdapter" Name="vw_Salary" UserDataComponentName="vw_SalaryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DBLORRRYSALARYConnectionString1 (Settings)" DbObjectName="dbo.vw_Salary" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ID, Date, DriverName, LorryNo, TripTypeName, CommissionRate, DONo, DODate, [From], [To], Goods, Qty, RateID, Rate, AdditionalRate, Amount, CreatedBy, CreatedOn, LastChangeBy, LastChangeOn
+FROM            vw_Salary</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="DriverName" DataSetColumn="DriverName" />
+              <Mapping SourceColumn="LorryNo" DataSetColumn="LorryNo" />
+              <Mapping SourceColumn="TripTypeName" DataSetColumn="TripTypeName" />
+              <Mapping SourceColumn="CommissionRate" DataSetColumn="CommissionRate" />
+              <Mapping SourceColumn="DONo" DataSetColumn="DONo" />
+              <Mapping SourceColumn="DODate" DataSetColumn="DODate" />
+              <Mapping SourceColumn="From" DataSetColumn="From" />
+              <Mapping SourceColumn="To" DataSetColumn="To" />
+              <Mapping SourceColumn="Goods" DataSetColumn="Goods" />
+              <Mapping SourceColumn="Qty" DataSetColumn="Qty" />
+              <Mapping SourceColumn="RateID" DataSetColumn="RateID" />
+              <Mapping SourceColumn="Rate" DataSetColumn="Rate" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="CreatedBy" DataSetColumn="CreatedBy" />
+              <Mapping SourceColumn="CreatedOn" DataSetColumn="CreatedOn" />
+              <Mapping SourceColumn="LastChangeBy" DataSetColumn="LastChangeBy" />
+              <Mapping SourceColumn="LastChangeOn" DataSetColumn="LastChangeOn" />
+              <Mapping SourceColumn="AdditionalRate" DataSetColumn="AdditionalRate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_UserInfoTableAdapter" GeneratorDataComponentClassName="vw_UserInfoTableAdapter" Name="vw_UserInfo" UserDataComponentName="vw_UserInfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DBLORRRYSALARYConnectionString1 (Settings)" DbObjectName="dbo.vw_UserInfo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        UserID, Name, Password, RoleID, RoleName, StatusName
+FROM            vw_UserInfo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UserID" DataSetColumn="UserID" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Password" DataSetColumn="Password" />
+              <Mapping SourceColumn="RoleID" DataSetColumn="RoleID" />
+              <Mapping SourceColumn="RoleName" DataSetColumn="RoleName" />
+              <Mapping SourceColumn="StatusName" DataSetColumn="StatusName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_RateTableAdapter" GeneratorDataComponentClassName="vw_RateTableAdapter" Name="vw_Rate" UserDataComponentName="vw_RateTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DBLORRRYSALARYConnectionString1 (Settings)" DbObjectName="dbo.vw_Rate" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT RateID, [From], [To], WeightRate, TripRate, StatusName FROM dbo.vw_Rate</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="RateID" DataSetColumn="RateID" />
+              <Mapping SourceColumn="From" DataSetColumn="From" />
+              <Mapping SourceColumn="To" DataSetColumn="To" />
+              <Mapping SourceColumn="WeightRate" DataSetColumn="WeightRate" />
+              <Mapping SourceColumn="TripRate" DataSetColumn="TripRate" />
+              <Mapping SourceColumn="StatusName" DataSetColumn="StatusName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsSalary" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSalary" msprop:Generator_UserDSName="dsSalary">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_Driver" msprop:Generator_TableClassName="vw_DriverDataTable" msprop:Generator_TableVarName="tablevw_Driver" msprop:Generator_RowChangedName="vw_DriverRowChanged" msprop:Generator_TablePropName="vw_Driver" msprop:Generator_RowDeletingName="vw_DriverRowDeleting" msprop:Generator_RowChangingName="vw_DriverRowChanging" msprop:Generator_RowEvHandlerName="vw_DriverRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_DriverRowDeleted" msprop:Generator_RowClassName="vw_DriverRow" msprop:Generator_UserTableName="vw_Driver" msprop:Generator_RowEvArgName="vw_DriverRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="DriverName" msprop:Generator_ColumnVarNameInTable="columnDriverName" msprop:Generator_ColumnPropNameInRow="DriverName" msprop:Generator_ColumnPropNameInTable="DriverNameColumn" msprop:Generator_UserColumnName="DriverName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DriverIC" msprop:Generator_ColumnVarNameInTable="columnDriverIC" msprop:Generator_ColumnPropNameInRow="DriverIC" msprop:Generator_ColumnPropNameInTable="DriverICColumn" msprop:Generator_UserColumnName="DriverIC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StatusName" msprop:Generator_ColumnVarNameInTable="columnStatusName" msprop:Generator_ColumnPropNameInRow="StatusName" msprop:Generator_ColumnPropNameInTable="StatusNameColumn" msprop:Generator_UserColumnName="StatusName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_Lorry" msprop:Generator_TableClassName="vw_LorryDataTable" msprop:Generator_TableVarName="tablevw_Lorry" msprop:Generator_RowChangedName="vw_LorryRowChanged" msprop:Generator_TablePropName="vw_Lorry" msprop:Generator_RowDeletingName="vw_LorryRowDeleting" msprop:Generator_RowChangingName="vw_LorryRowChanging" msprop:Generator_RowEvHandlerName="vw_LorryRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_LorryRowDeleted" msprop:Generator_RowClassName="vw_LorryRow" msprop:Generator_UserTableName="vw_Lorry" msprop:Generator_RowEvArgName="vw_LorryRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LorryID" msprop:Generator_ColumnVarNameInTable="columnLorryID" msprop:Generator_ColumnPropNameInRow="LorryID" msprop:Generator_ColumnPropNameInTable="LorryIDColumn" msprop:Generator_UserColumnName="LorryID" type="xs:int" />
+              <xs:element name="LorryNo" msprop:Generator_ColumnVarNameInTable="columnLorryNo" msprop:Generator_ColumnPropNameInRow="LorryNo" msprop:Generator_ColumnPropNameInTable="LorryNoColumn" msprop:Generator_UserColumnName="LorryNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommissionRate" msprop:Generator_ColumnVarNameInTable="columnCommissionRate" msprop:Generator_ColumnPropNameInRow="CommissionRate" msprop:Generator_ColumnPropNameInTable="CommissionRateColumn" msprop:Generator_UserColumnName="CommissionRate" type="xs:decimal" />
+              <xs:element name="StatusName" msprop:Generator_ColumnVarNameInTable="columnStatusName" msprop:Generator_ColumnPropNameInRow="StatusName" msprop:Generator_ColumnPropNameInTable="StatusNameColumn" msprop:Generator_UserColumnName="StatusName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_Salary" msprop:Generator_TableClassName="vw_SalaryDataTable" msprop:Generator_TableVarName="tablevw_Salary" msprop:Generator_RowChangedName="vw_SalaryRowChanged" msprop:Generator_TablePropName="vw_Salary" msprop:Generator_RowDeletingName="vw_SalaryRowDeleting" msprop:Generator_RowChangingName="vw_SalaryRowChanging" msprop:Generator_RowEvHandlerName="vw_SalaryRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_SalaryRowDeleted" msprop:Generator_RowClassName="vw_SalaryRow" msprop:Generator_UserTableName="vw_Salary" msprop:Generator_RowEvArgName="vw_SalaryRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
+              <xs:element name="DriverName" msprop:Generator_ColumnVarNameInTable="columnDriverName" msprop:Generator_ColumnPropNameInRow="DriverName" msprop:Generator_ColumnPropNameInTable="DriverNameColumn" msprop:Generator_UserColumnName="DriverName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LorryNo" msprop:Generator_ColumnVarNameInTable="columnLorryNo" msprop:Generator_ColumnPropNameInRow="LorryNo" msprop:Generator_ColumnPropNameInTable="LorryNoColumn" msprop:Generator_UserColumnName="LorryNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TripTypeName" msprop:Generator_ColumnVarNameInTable="columnTripTypeName" msprop:Generator_ColumnPropNameInRow="TripTypeName" msprop:Generator_ColumnPropNameInTable="TripTypeNameColumn" msprop:Generator_UserColumnName="TripTypeName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CommissionRate" msprop:Generator_ColumnVarNameInTable="columnCommissionRate" msprop:Generator_ColumnPropNameInRow="CommissionRate" msprop:Generator_ColumnPropNameInTable="CommissionRateColumn" msprop:Generator_UserColumnName="CommissionRate" type="xs:decimal" />
+              <xs:element name="DONo" msprop:Generator_ColumnVarNameInTable="columnDONo" msprop:Generator_ColumnPropNameInRow="DONo" msprop:Generator_ColumnPropNameInTable="DONoColumn" msprop:Generator_UserColumnName="DONo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DODate" msprop:Generator_ColumnVarNameInTable="columnDODate" msprop:Generator_ColumnPropNameInRow="DODate" msprop:Generator_ColumnPropNameInTable="DODateColumn" msprop:Generator_UserColumnName="DODate" type="xs:dateTime" />
+              <xs:element name="From" msprop:Generator_ColumnVarNameInTable="columnFrom" msprop:Generator_ColumnPropNameInRow="From" msprop:Generator_ColumnPropNameInTable="FromColumn" msprop:Generator_UserColumnName="From">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="To" msprop:Generator_ColumnVarNameInTable="columnTo" msprop:Generator_ColumnPropNameInRow="To" msprop:Generator_ColumnPropNameInTable="ToColumn" msprop:Generator_UserColumnName="To">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Goods" msprop:Generator_ColumnVarNameInTable="columnGoods" msprop:Generator_ColumnPropNameInRow="Goods" msprop:Generator_ColumnPropNameInTable="GoodsColumn" msprop:Generator_UserColumnName="Goods">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Qty" msprop:Generator_ColumnVarNameInTable="columnQty" msprop:Generator_ColumnPropNameInRow="Qty" msprop:Generator_ColumnPropNameInTable="QtyColumn" msprop:Generator_UserColumnName="Qty" type="xs:decimal" />
+              <xs:element name="RateID" msprop:Generator_ColumnVarNameInTable="columnRateID" msprop:Generator_ColumnPropNameInRow="RateID" msprop:Generator_ColumnPropNameInTable="RateIDColumn" msprop:Generator_UserColumnName="RateID" type="xs:int" />
+              <xs:element name="Rate" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" msprop:Generator_UserColumnName="Rate" type="xs:decimal" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" />
+              <xs:element name="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" msprop:Generator_UserColumnName="CreatedBy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedOn" msprop:Generator_ColumnVarNameInTable="columnCreatedOn" msprop:Generator_ColumnPropNameInRow="CreatedOn" msprop:Generator_ColumnPropNameInTable="CreatedOnColumn" msprop:Generator_UserColumnName="CreatedOn" type="xs:dateTime" />
+              <xs:element name="LastChangeBy" msprop:Generator_ColumnVarNameInTable="columnLastChangeBy" msprop:Generator_ColumnPropNameInRow="LastChangeBy" msprop:Generator_ColumnPropNameInTable="LastChangeByColumn" msprop:Generator_UserColumnName="LastChangeBy">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastChangeOn" msprop:Generator_ColumnVarNameInTable="columnLastChangeOn" msprop:Generator_ColumnPropNameInRow="LastChangeOn" msprop:Generator_ColumnPropNameInTable="LastChangeOnColumn" msprop:Generator_UserColumnName="LastChangeOn" type="xs:dateTime" />
+              <xs:element name="AdditionalRate" msprop:Generator_ColumnVarNameInTable="columnAdditionalRate" msprop:Generator_ColumnPropNameInRow="AdditionalRate" msprop:Generator_ColumnPropNameInTable="AdditionalRateColumn" msprop:Generator_UserColumnName="AdditionalRate" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_UserInfo" msprop:Generator_TableClassName="vw_UserInfoDataTable" msprop:Generator_TableVarName="tablevw_UserInfo" msprop:Generator_RowChangedName="vw_UserInfoRowChanged" msprop:Generator_TablePropName="vw_UserInfo" msprop:Generator_RowDeletingName="vw_UserInfoRowDeleting" msprop:Generator_RowChangingName="vw_UserInfoRowChanging" msprop:Generator_RowEvHandlerName="vw_UserInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_UserInfoRowDeleted" msprop:Generator_RowClassName="vw_UserInfoRow" msprop:Generator_UserTableName="vw_UserInfo" msprop:Generator_RowEvArgName="vw_UserInfoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UserID" msprop:Generator_ColumnVarNameInTable="columnUserID" msprop:Generator_ColumnPropNameInRow="UserID" msprop:Generator_ColumnPropNameInTable="UserIDColumn" msprop:Generator_UserColumnName="UserID" type="xs:int" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RoleID" msprop:Generator_ColumnVarNameInTable="columnRoleID" msprop:Generator_ColumnPropNameInRow="RoleID" msprop:Generator_ColumnPropNameInTable="RoleIDColumn" msprop:Generator_UserColumnName="RoleID" type="xs:int" minOccurs="0" />
+              <xs:element name="RoleName" msprop:Generator_ColumnVarNameInTable="columnRoleName" msprop:Generator_ColumnPropNameInRow="RoleName" msprop:Generator_ColumnPropNameInTable="RoleNameColumn" msprop:Generator_UserColumnName="RoleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StatusName" msprop:Generator_ColumnVarNameInTable="columnStatusName" msprop:Generator_ColumnPropNameInRow="StatusName" msprop:Generator_ColumnPropNameInTable="StatusNameColumn" msprop:Generator_UserColumnName="StatusName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_Rate" msprop:Generator_TableClassName="vw_RateDataTable" msprop:Generator_TableVarName="tablevw_Rate" msprop:Generator_RowChangedName="vw_RateRowChanged" msprop:Generator_TablePropName="vw_Rate" msprop:Generator_RowDeletingName="vw_RateRowDeleting" msprop:Generator_RowChangingName="vw_RateRowChanging" msprop:Generator_RowEvHandlerName="vw_RateRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_RateRowDeleted" msprop:Generator_RowClassName="vw_RateRow" msprop:Generator_UserTableName="vw_Rate" msprop:Generator_RowEvArgName="vw_RateRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RateID" msprop:Generator_ColumnVarNameInTable="columnRateID" msprop:Generator_ColumnPropNameInRow="RateID" msprop:Generator_ColumnPropNameInTable="RateIDColumn" msprop:Generator_UserColumnName="RateID" type="xs:int" />
+              <xs:element name="From" msprop:Generator_ColumnVarNameInTable="columnFrom" msprop:Generator_ColumnPropNameInRow="From" msprop:Generator_ColumnPropNameInTable="FromColumn" msprop:Generator_UserColumnName="From">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="To" msprop:Generator_ColumnVarNameInTable="columnTo" msprop:Generator_ColumnPropNameInRow="To" msprop:Generator_ColumnPropNameInTable="ToColumn" msprop:Generator_UserColumnName="To">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeightRate" msprop:Generator_ColumnVarNameInTable="columnWeightRate" msprop:Generator_ColumnPropNameInRow="WeightRate" msprop:Generator_ColumnPropNameInTable="WeightRateColumn" msprop:Generator_UserColumnName="WeightRate" type="xs:decimal" />
+              <xs:element name="TripRate" msprop:Generator_ColumnVarNameInTable="columnTripRate" msprop:Generator_ColumnPropNameInRow="TripRate" msprop:Generator_ColumnPropNameInTable="TripRateColumn" msprop:Generator_UserColumnName="TripRate" type="xs:decimal" />
+              <xs:element name="StatusName" msprop:Generator_ColumnVarNameInTable="columnStatusName" msprop:Generator_ColumnPropNameInRow="StatusName" msprop:Generator_ColumnPropNameInTable="StatusNameColumn" msprop:Generator_UserColumnName="StatusName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Driver" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="vw_Lorry_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Lorry" />
+      <xs:field xpath="mstns:LorryID" />
+    </xs:unique>
+    <xs:unique name="vw_Salary_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Salary" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="vw_Rate_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vw_Rate" />
+      <xs:field xpath="mstns:RateID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,1 @@
+﻿select * from vw_Lorry where StatusName = 'Approved' order by LorryNo asc
